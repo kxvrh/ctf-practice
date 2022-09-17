@@ -1,0 +1,60 @@
+https://blog.csdn.net/Luiino/article/details/126015022
+
+https://wenku.baidu.com/view/ea798252f76527d3240c844769eae009581ba2ec.html
+
+https://willv.cn/2018/07/21/RSA-ATTACK/
+
+模运算性质:
+若p = a - b, 则 a  ≡ b (%p), 且等价于 b ≡ a (%p)
+若a % b = c，则 ka % b = kc
+
+基本运算
+(a ± b) % n = ((a  % n) ± (b % n)) % n
+(a * b) % n = ((a % n) * (b % n)) % n
+a^b % n = ((a % n )^b) % n
+a * b % n = (a % n * b % n) % n
+(a / b) % n = ((a % n) * (inv(b) % n)) % n
+		       inv(b) = b^(n - 2)
+b/a % m = b*a^(m-2) % m		--> 费马小定理
+
+
+结合律
+((a + b) % p + c) % p = (a + (b + c) % p) % p
+((a * b) % p * c) % p = (a * (b * c) % p) % p
+
+分配律
+((a +b)% p * c) % p = ((a * c) % p + (b * c) % p) % p 
+
+中国剩余定理
+(a + b) % n = (a % n + b % n) % n
+(a * b) % n = (a % n * b % n) % n
+
+同余定理
+给定一个正整数m，如果两个整数a和b满足a-b能被m整除，即(a-b)mod m =0
+称整数a与b对模m同余，记作 a ≡ b (mod m)，同时可成立 a mod m = b
+	--> 若 a ≡ 0 (mod m)，则 m | a
+	--> 若 a ≡ b (mod m)，等价于a与b分别除以m，余数相同
+
+逆元
+对任意整数a，满足b | a（a能被b整除），则存在一个整数x使得
+	a / b ≡ a * x (mod p)
+	a  ≡ a * b * x (mod p) 
+	1  ≡ b * x (mod p)
+	b * x  ≡ 1 (mod p)
+--> x = a^-1 (mod p)
+充分必要条件：a存在逆元 <-> a与模数p互质
+
+当p为质数，可以用快速幂求逆元
+由费马小定理可知，当p为质数	--> a^(p - 1) ≡1 (mod p)
+			--> a * a ^(p - 2)  ≡ 1 (mod p)
+			--> a的乘法逆元 x = a^(p -2)
+			--> a^p = a(mod p)
+			--> 即a^p除以p的余数与a除以p的余数相同
+			--> p为素数时，a^p - a为p的倍数
+			--> b/a % m = b*a^(m-2) % m
+当p不为质数，可以用扩展欧几里得算法求逆元
+充分必要条件a和p互质	--> gcd(a, p) = 1
+			--> a * x  ≡ 1 (mod p)，其中x为a的逆元
+			--> ax + py = 1
+			--> 扩展欧几里得算法求解 x, y = exgcd(a, p)
+
