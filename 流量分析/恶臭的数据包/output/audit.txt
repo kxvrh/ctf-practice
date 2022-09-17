@@ -1,0 +1,25 @@
+Foremost version 1.5.7 by Jesse Kornblum, Kris Kendall, and Nick Mikus
+Audit File
+
+Foremost started at Fri Sep 16 05:04:47 2022
+Invocation: foremost raw.png 
+Output directory: /root/Desktop/ctf/output
+Configuration file: /etc/foremost.conf
+------------------------------------------------------------------
+File: raw.png
+Start: Fri Sep 16 05:04:47 2022
+Length: 12 KB (13225 bytes)
+ 
+Num	 Name (bs=512)	       Size	 File Offset	 Comment 
+
+0:	00000025.zip 	      204 B 	      12971 	 
+1:	00000000.png 	      12 KB 	          0 	  (104 x 101)
+Finish: Fri Sep 16 05:04:47 2022
+
+2 FILES EXTRACTED
+	
+zip:= 1
+png:= 1
+------------------------------------------------------------------
+
+Foremost finished at Fri Sep 16 05:04:47 2022

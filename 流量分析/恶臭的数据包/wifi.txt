@@ -1,0 +1,16 @@
+aircrack-ng [file] -w /usr/share/wfuzz/wordlist/general/big.txt
+ESSID: mamawoxiangwantiequan
+KEY:12345678
+
+airdecap-ng [file] -e [ESSID] -p [KEY]
+--> [file-dec]
+wireshark [file-dec]  --> post --> follow tcp --> raw
+010 editor删除http请求头 --> [.png]
+binwalk [.png]
+foremost [.png] --> zip --> [.txt*]
+
+raw --> cookie --> base64 --> 
+{"alg":"HS256","typ":"JWT"}{"hint":"for security, I set my password as a website which i just pinged before"}ġ+6$bL<Z:ޅȩ$ʇ!.@
+--> ping --> 没有icmp --> 找dns --> ."...........26rsfb.dnslog.cn..............(......
+
+zip --> 尝试多个域名密码 --> flag.txt

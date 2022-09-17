@@ -1,0 +1,1 @@
+nfs --> binwalk -e [.pcap] --> 52DEF为pdf --> 将()中的内容拼接起来即为flag
