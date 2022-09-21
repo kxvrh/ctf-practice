@@ -1,7 +1,7 @@
 https://blog.csdn.net/Luiino/article/details/126015022
 
 https://wenku.baidu.com/view/ea798252f76527d3240c844769eae009581ba2ec.html
-
+https://xz.aliyun.com/t/6459?page=1
 https://willv.cn/2018/07/21/RSA-ATTACK/
 
 模运算性质:
@@ -34,6 +34,12 @@ b/a % m = b*a^(m-2) % m		--> 费马小定理
 称整数a与b对模m同余，记作 a ≡ b (mod m)，同时可成立 a mod m = b
 	--> 若 a ≡ 0 (mod m)，则 m | a
 	--> 若 a ≡ b (mod m)，等价于a与b分别除以m，余数相同
+反身性：a ≡ a (mod m)
+对称性：若a ≡ b (mod m)，则 b ≡ a (mod m)
+传递性：若a ≡ b (mod m)，b ≡c (mod m)，则若a ≡ c (mod m)
+同余式相加：若a ≡ b (mod m)，c ≡d (mod m)，则  a ± c ≡ b ± d (mod m)
+同余式相乘：若a ≡ b (mod m)，c ≡d (mod m)，则 ac ≡ bd (mod m)
+同余式相除：若ac ≡ bc (mod m)，则 a ≡b (mod m / gcd(c,m))
 
 逆元
 对任意整数a，满足b | a（a能被b整除），则存在一个整数x使得
