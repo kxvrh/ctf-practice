@@ -1,1 +1,43 @@
 维吉尼亚密码
+
+-->https://guballa.de/vigenere-solver
+
+
+key = icqvigenere
+
+the quick brown fox jumps over 13 lazy dogs. history
+the first well-documented description of a polyalphabetic cipher was formulated by leon battista alberti around 1467 and used a metal cipher disc to switch between cipher alphabets. alberti's system only switched alphabets after several words, and switches were indicated by writing the letter of the corresponding alphabet in the ciphertext. later, in 1508, johannes trithemius, in his work poligraphia, invented the tabula recta, a critical component of the vigenère cipher. the trithemius cipher, however, only provided a progressive, rigid and predictable system for switching between cipher alphabets.[citation needed]
+
+what is now known as the vigenère cipher was originally described by giovan battista bellaso in his 1553 book la cifra del sig. giovan battista bellaso.[4] he built upon the tabula recta of trithemius but added a repeating "countersign" (a key) to switch cipher alphabets every letter. whereas alberti and trithemius used a fixed pattern of substitutions, bellaso's scheme meant the pattern of substitutions could be easily changed, simply by selecting a new key. keys were typically single words or short phrases, known to both parties in advance, or transmitted "out of band" along with the message. bellaso's method thus required strong security for only the key. as it is relatively easy to secure a short key phrase, such as by a previous private conversation, bellaso's system was considerably more secure.[citation needed]
+
+blaise de vigenère published his description of a similar but stronger autokey cipher before the court of henry iii of france, in 1586.[5] later, in the 19th century, the invention of bellaso's cipher was misattributed to vigenère. david kahn, in his book, the codebreakers lamented the misattribution by saying that history had "ignored this important contribution and instead named a regressive and elementary cipher for him [vigenère] though he had nothing to do with it".[6]
+
+the vigenère cipher gained a reputation for being exceptionally strong. noted author and mathematician charles lutwidge dodgson (lewis carroll) called the vigenère cipher unbreakable in his 1868 piece "the alphabet cipher" in a children's magazine. in 1917, scientific american described the vigenère cipher as "impossible of translation".[7][8] that reputation was not deserved. charles babbage is known to have broken a variant of the cipher as early as 1854 but failed to publish his work.[9] kasiski entirely broke the cipher and published the technique in the 19th century, but even earlier, some skilled cryptanalysts could occasionally break the cipher in the 16th century.[6]
+
+
+cryptographic slide rule used as a calculation aid by the swiss army between 1914 and 1940.
+the vigenère cipher is simple enough to be a field cipher if it is used in conjunction with cipher disks.[10] the confederate states of america, for example, used a brass cipher disk to implement the vigenère cipher during the american civil war. the confederacy's messages were far from secret, and the union regularly cracked its messages. throughout the war, the confederate leadership primarily relied upon three key phrases: "manchester bluff", "complete victory" and, as the war came to a close, "come retribution".[11]
+
+gilbert vernam tried to repair the broken cipher (creating the vernam–vigenère cipher in 1918), but no matter what he did, the cipher was still vulnerable to cryptanalysis. vernam's work, however, eventually led to the one-time pad, a theoretically-unbreakable cipher.[12]
+
+description
+
+the vigenère square or vigenère table, also known as the tabula recta, can be used for encryption and decryption.
+in a caesar cipher, each letter of the alphabet is shifted along some number of places. for example, in a caesar cipher of shift 3, a would become d, b would become e, y would become b and so on. the vigenère cipher has several caesar ciphers in sequence with different shift values.
+
+to encrypt, a table of alphabets can be used, termed a tabula recta, vigenère square or vigenère table. it has the alphabet written out 26 times in different rows, each alphabet shifted cyclically to the left compared to the previous alphabet, corresponding to the 26 possible caesar ciphers. at different points in the encryption process, the cipher uses a different alphabet from one of the rows. the alphabet used at each point depends on a repeating keyword.[citation needed]
+
+for example, suppose that the plaintext to be encrypted is
+
+attackatdawn.
+the person sending the message chooses a keyword and repeats it until it matches the length of the plaintext, for example, the keyword "lemon":
+
+lemonlemonle
+each row starts with a key letter. the rest of the row holds the letters a to z (in shifted order). although there are 26 key rows shown, a code will use only as many keys (different alphabets) as there are unique letters in the key string, here just 5 keys: {l, e, m, o, n}. flag, '{' and 'vigenereisveryeasyhuh' and '}' for successive letters of the message, successive letters of the key string will be taken and each message letter enciphered by using its corresponding key row. the next letter of the key is chosen, and that row is gone along to find the column heading that matches the message character. the letter at the intersection of [key-row, msg-col] is the enciphered letter.
+
+for example, the first letter of the plaintext, a, is paired with l, the first letter of the key. therefore, row l and column a of the vigenère square are used, namely l. similarly, for the second letter of the plaintext, the second letter of the key is used. the letter at row e and column t is x. the rest of the plaintext is enciphered in a similar fashion:
+
+plaintext:	attackatdawn
+key:	lemonlemonle
+ciphertext:	lxfopvefrnhr
+decryption is performed by going to the row in the table corresponding to the key, finding the position of the ciphertext letter in that row and then using the column's label as the plaintext. for example, in row l (from lemon), the ciphertext l appears in column a, which is the first plaintext letter. next, row e (from lemon) is gone to, the ciphertext x is located that is found in column t. thus t is the second plaintext letter.
