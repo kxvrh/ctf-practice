@@ -1,0 +1,1 @@
+openssl rsautl -encrypt -in FLAG -inkey public.pem -pubin -out flag.enc
