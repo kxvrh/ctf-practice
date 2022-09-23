@@ -1,0 +1,6 @@
+ctrl+f 搜索txt
+http post追踪tcp流，搜索txt
+
+'ZmxhZ3sxZjA2NmZjMC0zMzJjLTRlZjQtOTcwNC1hOGU4MTY2N2EwOWR9' &gt;&gt; C:\Users\admin\Desktop\1.txt
+
+base64解码
