@@ -44,6 +44,13 @@ def decrypt_md5(md5_value, prefix, k):
                 return
     print('Not found...try a bigger k.')
 
+def online_decrypt_md5(md5hash):
+    apikey='83750c877f8523955b3e0204'
+    rtype = 'crack'
+    url = 'http://api.md5crack.com/'+rtype+'/'+apikey+'/'+md5hash
+    r = requests.get(url)
+    print (r.json())
+
 if __name__ == '__main__':
     res = '8b184b'
     # decrypt_md5_res1(res)
