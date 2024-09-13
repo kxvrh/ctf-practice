@@ -1,0 +1,4 @@
+# 使用john the ripper暴力破解
+
+zip2john flag.zip > zip.hash
+john --wordlist=/usr/share/wordlists/rockyou.txt zip.hash
