@@ -1,0 +1,16 @@
+POST /welcome.php HTTP/1.1
+
+Host: 175.27.169.122:63700
+Content-Length: 8
+Cache-Control: max-age=0
+Accept-Language: en-US,en;q=0.9
+Origin: http://175.27.169.122:63700
+Content-Type: application/x-www-form-urlencoded
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+Referer: http://175.27.169.122:63700/welcome.php
+Accept-Encoding: gzip, deflate, br
+Cookie: Hm_lvt_1cd9bcbaae133f03a6eb19da6579aaba=1769844042; HMACCOUNT=C00F4C17B2F0F77B; JSESSIONID=05883C83E1F39F8588AC52BC55B535CB; Hm_lpvt_1cd9bcbaae133f03a6eb19da6579aaba=1769845007; PHPSESSID=5e02809cb50b9279806bd8b53df90c88; token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdXRoIjoxNzcwMjQ4NDU3MTUwLCJhZ2VudCI6Ik1vemlsbGEvNS4wIChYMTE7IExpbnV4IHg4Nl82NCkgQXBwbGVXZWJLaXQvNTM3LjM2IChLSFRNTCwgbGlrZSBHZWNrbykgQ2hyb21lLzEzOS4wLjAuMCBTYWZhcmkvNTM3LjM2Iiwicm9sZSI6InVzZXIiLCJpYXQiOjE3NzAyNDg0NTd9.MaccswUXleVkQe4r4gHoOeoE051H-9vIGp7lcFOoh9c
+Connection: keep-alive
+search=1
